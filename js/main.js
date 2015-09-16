@@ -64,9 +64,10 @@ jQuery(document).ready(function(){
 
 	//go to next/pre slide - keyboard navigation
 	$(document).keyup(function(event){
-		if(event.which=='37' &&  intro.hasClass('projects-visible') && !(sliderNav.find('.prev').hasClass('inactive')) ) {
+		var mq = checkMQ();
+		if(event.which=='37' &&  intro.hasClass('projects-visible') && !(sliderNav.find('.prev').hasClass('inactive')) && (mq == 'desktop') ) {
 			prevSides(projectsSlider);
-		} else if( event.which=='39' &&  intro.hasClass('projects-visible') && !(sliderNav.find('.next').hasClass('inactive')) ) {
+		} else if( event.which=='39' &&  intro.hasClass('projects-visible') && !(sliderNav.find('.next').hasClass('inactive')) && (mq == 'desktop') ) {
 			nextSides(projectsSlider);
 		} else if(event.which=='27' && singleProjectContent.hasClass('is-visible')) {
 			singleProjectContent.removeClass('is-visible');
@@ -74,11 +75,13 @@ jQuery(document).ready(function(){
 	});
 
 	projectsSlider.on('swipeleft', function(){
-		( !(sliderNav.find('.next').hasClass('inactive')) ) && nextSides(projectsSlider);
+		var mq = checkMQ();
+		if( !(sliderNav.find('.next').hasClass('inactive')) && (mq == 'desktop') ) nextSides(projectsSlider);
 	});
 
 	projectsSlider.on('swiperight', function(){
-		( !(sliderNav.find('.prev').hasClass('inactive')) ) && prevSides(projectsSlider);
+		var mq = checkMQ();
+		if ( !(sliderNav.find('.prev').hasClass('inactive')) && (mq == 'desktop') ) prevSides(projectsSlider);
 	});
 
 	function showProjectPreview(project) {
