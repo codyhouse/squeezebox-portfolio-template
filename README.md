@@ -11,6 +11,8 @@ To see Squeezbox Redux in action, check out the Team and Portfolio sliders on th
 
 ## Features
 
+See the latest Squeezbox Redux demo [here](https://squeezebox-redux-demo.firebaseapp.com/).
+
 The original version of Squeezebox Portfolio had three major issues:
 
 1. The slider was only usable on a page *once*. Either that, or all SCSS, JavaScript, and HTML had to be repeated with different (and more specific) selectors.
@@ -24,3 +26,7 @@ Squeezebox Redux solves these issues by...
 3. ...adding an easy-to-see and simple-to-understand 'close slider' button through the `close-btn` class.
 
 As much as possible, the feature set of [the original Squeezebox](http://codyhouse.co/gem/squeezebox-portfolio-template/) has been maintained.
+
+---
+
+## C
