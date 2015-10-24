@@ -1,4 +1,4 @@
-@import 'bourbon'; // http://bourbon.io/
+@import 'bourbon/bourbon'; // http://bourbon.io/
 
 @import '../partials/variables'; // colors, fonts etc...
 
@@ -6,7 +6,7 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -38,7 +38,7 @@ img {
 	max-width: 100%;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Patterns - reusable parts of our design
 
@@ -64,7 +64,18 @@ Patterns - reusable parts of our design
 		box-shadow: 0 1px 30px rgba($color-2, .4), inset 0 1px 0 rgba(#fff, .4);
 	}
 }
-
+.close-btn{
+  display: inline-block;
+	position:fixed;
+	bottom: 20px;
+  width: 30vw;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+	z-index:5;
+  text-align: center;
+}
 .cd-img-replace {
 	/* replace text with image */
 	color: transparent;
@@ -73,7 +84,7 @@ Patterns - reusable parts of our design
 	white-space: nowrap;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Intro page
 
@@ -104,7 +115,7 @@ Intro page
 		@include transition(opacity .2s);
 	}
 
-	.content-wrapper {
+	.cd-content-wrapper {
 		/* vertical align the .cd-intro-block content */
 		display: table-cell;
 		vertical-align: middle;
@@ -120,11 +131,11 @@ Intro page
 		@include font-smoothing;
 	}
 
-	&.projects-visible {
+	&.items-visible {
 		/* translate the .cd-intro-block element to reveal the projects slider */
 		@include transform(translateY(-90%));
 		box-shadow: 0 4px 40px rgba(#000, .6);
-		cursor: pointer; 
+		cursor: pointer;
 
 		&:after {
 			/* show arrow icon */
@@ -143,19 +154,19 @@ Intro page
 			font-weight: 300;
 		}
 
-		&.projects-visible {
+		&.items-visible {
 			@include transform(translateY(-95%));
 		}
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Projects Slider
 
 -------------------------------- */
 
-.cd-projects-wrapper {
+.cd-items-wrapper {
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -172,7 +183,7 @@ Projects Slider
 		display: none;
 	}
 
-	&.projects-visible {
+	&.items-visible {
 		visibility: visible;
 		@include transition(visibility 0s 0s);
 	}
@@ -190,7 +201,7 @@ Projects Slider
 	height: 100%;
 	overflow-y: auto;
 
-	.projects-visible & {
+	.items-visible & {
 		/* smooth scrolling on iOS */
 		-webkit-overflow-scrolling: touch;
 	}
@@ -204,7 +215,7 @@ Projects Slider
 
 		/* Force hardware acceleration */
 		@include transform(translateZ(0));
-		@include backface-visibility(hidden); 
+		@include backface-visibility(hidden);
 
 		&.slides-in {
 			@include transition(opacity 0s 0s);
@@ -225,7 +236,7 @@ Projects Slider
 		width: 100%;
 	}
 
-	.project-info {
+	.item-info {
 		padding: 1em 1.6em;
 		background-color: $color-3;
 		border-radius: 0 0 .25em .25em;
@@ -260,7 +271,7 @@ Projects Slider
 
 		/* Force hardware acceleration */
 		@include transform(translateZ(0));
-		@include backface-visibility(hidden); 
+		@include backface-visibility(hidden);
 
 		@include clearfix;
 
@@ -324,7 +335,7 @@ Projects Slider
 
 		&.next li.current + li + li + li +li + li ~ li {
 			@include animation(cd-slide-6 0.5s);
-		} 
+		}
 
 		&.prev li {
 			/* previous slide animation */
@@ -367,7 +378,7 @@ Projects Slider
 @include squeezebox(cd-slide-6, 65%);
 @include squeezebox(cd-slide-7, -95%);
 
-/* -------------------------------- 
+/* --------------------------------
 
 Project slider navigation
 
@@ -406,13 +417,13 @@ Project slider navigation
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Project content panel 
+Project content panel
 
 -------------------------------- */
 
-.cd-project-content {
+.cd-item-content {
 	position: fixed;
 	z-index: 3;
 	top: 0;
@@ -421,12 +432,12 @@ Project content panel
 	height: 100%;
 	visibility: hidden;
 	background-color: $color-3;
-	
+
 	/* Force Hardware Acceleration */
 	@include transform(translateZ(0));
 	@include backface-visibility(hidden);
-	
-	@include transform(translateY(100%)); 
+
+	@include transform(translateY(100%));
 	@include transition(transform 0.4s 0s, visibility 0s 0.4s);
 	@include transition-timing-function(cubic-bezier(.67,.15,.83,.83));
 
@@ -434,7 +445,7 @@ Project content panel
 		height: 100%;
 		overflow-y: auto;
 		padding: 4em 2em;
-		
+
 		> * {
 			max-width: 800px;
 			margin-left: auto;
@@ -506,7 +517,7 @@ Project content panel
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Keyframes
 
