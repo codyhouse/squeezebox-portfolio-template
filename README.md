@@ -29,4 +29,43 @@ As much as possible, the feature set of [the original Squeezebox](http://codyhou
 
 ---
 
-## C
+*the following is adapted from the [original Squeezebox article](http://codyhouse.co/gem/squeezebox-portfolio-template/)*
+
+## Creating the Structure
+
+The **HTML structure** is composed by 3 main blocks: a `.cd-intro-block` element, containing the action button to reveal the items slider, an unordered list `.cd-slider`, which is the item gallery/slider, and `.cd-item-content` elements with the full content of a single item, further identified by a specific id.
+
+```html
+
+<div class="cd-intro-block">
+  <div class="cd-content-wrapper">
+    <h1>Squeezebox Redux Item Slider 1</h1>
+    <a href="#0" class='cd-btn' data-action="show-items">Show items</a>
+  </div>
+</div> <!-- .cd-intro-block -->
+
+<div class="cd-items-wrapper">
+  <a href="#0" class="cd-btn close-btn" data-action="close-items">close slider</a>
+  <ul class="cd-slider">
+    <li class="current">
+      <a href="#0"  data-action="item1_content">
+        <img src="img/img.png" alt="item image">
+        <div class="item-info">
+          <h2>Item 1</h2>
+          <!-- preview content -->
+        </div>
+      </a>
+    </li>
+
+    <div class="cd-item-content" id="item1_content">
+  		<div>
+  			<h2>Item 1 Title Here</h2>
+  			<em>Subtitle</em>
+          <!--project content-->
+  		</div>
+  		<a href="#0" class="close cd-img-replace">Close</a>
+  	</div>
+
+```
+
+---
