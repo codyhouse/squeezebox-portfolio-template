@@ -11,14 +11,16 @@ To see Squeezbox Redux in action, check out the Team and Portfolio sliders on th
 
 ## Features
 
-The original version of Squeezebox Portfolio had two major issues:
+The original version of Squeezebox Portfolio had three major issues:
 
 1. The slider was only usable on a page *once*. Either that, or all SCSS, JavaScript, and HTML had to be repeated with different (and more specific) selectors.
 2. When individual projects in the slider were clicked, the project content that was displayed was limited to one set of content.
+3. Especially on desktop, escaping the slider view was difficult and unintuitive. Users had to click on a small arrow icon, which disappeared on scroll when implemented as a part of a large page.
 
 Squeezebox Redux solves these issues by...
 
 1. ...generalizing the implementation of all JavaScript functions. Now, instead of looking for specific classes inside of functions, you'll see a lot more use of `this`, `$(this)`, `.parent()`,`.children()`, and `.next()`. In short, you can now expect each function to run without global conflicts.
 2. ...allowing for multiple `item-content` sections, assignable to specific ids of content through a `data-action` attribute on clickable content.
+3. ...adding an easy-to-see and simple-to-understand 'close slider' button through the `close-btn` class.
 
 As much as possible, the feature set of [the original Squeezebox](http://codyhouse.co/gem/squeezebox-portfolio-template/) has been maintained.
