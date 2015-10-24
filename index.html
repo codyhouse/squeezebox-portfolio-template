@@ -13,9 +13,10 @@
 	<title>Squeezebox Redux | Alex Pearson</title>
 </head>
 <body>
+	<!-- First Slider -->
 	<div class="cd-intro-block">
 		<div class="cd-content-wrapper">
-			<h1>Squeezebox Redux Item Slider</h1>
+			<h1>Squeezebox Redux Item Slider 1</h1>
 			<a href="#0" class='cd-btn' data-action="show-items">Show items</a>
 		</div>
 	</div> <!-- .cd-intro-block -->
@@ -272,6 +273,121 @@
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
 	</div>
+	<!-- Second Slider -->
+	<div class="cd-intro-block">
+		<div class="cd-content-wrapper">
+			<h1>Squeezebox Redux Item Slider 2</h1>
+			<a href="#0" class='cd-btn' data-action="show-items">Show items</a>
+		</div>
+	</div> <!-- .cd-intro-block -->
+
+	<div class="cd-items-wrapper">
+		<a href="#0" class="cd-btn close-btn" data-action="close-items">close slider</a>
+		<ul class="cd-slider">
+			<li class="current">
+				<a href="#0"  data-action="item1_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 1</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item2_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, dicta.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item3_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 3</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item4_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 4</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item5_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 5</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item6_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 6</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item7_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 7</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item8_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 8</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0" data-action="item9_content">
+					<img src="img/img.png" alt="item image">
+					<div class="item-info">
+						<h2>Item 9</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="cd-slider-navigation cd-img-replace">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next">Next</a></li>
+		</ul> <!-- .cd-slider-navigation -->
+	</div> <!-- .cd-item-wrapper -->
+
+	<!--#############################
+	ADDITIONAL ITEM CONTENT HERE
+	##################################-->
+	<!-- ## For the sake of brevity, the content from the first slider has been reused.
+	To use unique item data, just assign unique IDs to each item and set them equal
+	to the data-action attribute of their preview in the slider. -->
+
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
